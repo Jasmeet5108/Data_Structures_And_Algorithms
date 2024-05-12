@@ -25,8 +25,20 @@ arr = [23, 54, 11, 16, 44, 39, 64, 28]
 Selection_Sort(arr)
 print(f"Sorted Array using Selection Sort => {arr}")
 
+# 2.) Insertion Sort
+def Insertion_Sort(nums):
+    n = len(nums)
+    for i in range(1, n):
+        min_index = i
+        min_value = nums.pop(i)
+        for j in range(i - 1, -1, -1):
+            if nums[j] > min_value:
+                min_index = j
+        nums.insert(min_index, min_value)
 
-
+nums = [23, 56, 1, 4, 3, 14, 87, 33, 39, 20]
+Insertion_Sort(nums)
+print(nums)
 
 
 
